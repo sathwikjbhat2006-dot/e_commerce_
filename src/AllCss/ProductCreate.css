@@ -1,0 +1,217 @@
+/* ==========================================================================
+   PRODUCT CREATE & FORM STYLING (.product-create-container, .product-form)
+   ========================================================================== */
+
+/* Outer Page Container */
+.product-create-container {
+  max-width: 760px;
+  margin: 3rem auto 4rem;
+  padding: 2.5rem;
+  background: var(--bg-surface, #ffffff);
+  border-radius: var(--radius-xl, 16px);
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(15, 23, 42, 0.06));
+  border: 1px solid var(--border-default, #e2e8f0);
+  font-family: var(--font-family, inherit);
+}
+
+/* Page Title */
+.product-create-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-primary, #0f172a);
+  text-transform: capitalize;
+  margin: 0 0 2rem 0;
+  text-align: center;
+  letter-spacing: -0.02em;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.product-create-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 3px;
+  background: var(--color-accent, #2563eb);
+  border-radius: var(--radius-full, 9999px);
+}
+
+/* Form Layout */
+.product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.product-form h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary, #0f172a);
+  text-transform: capitalize;
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label,
+.form-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary, #334155);
+  text-transform: capitalize;
+  margin-bottom: 0.4rem;
+  display: inline-block;
+}
+
+.form-group input,
+.form-group .custom-input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  font-size: 0.95rem;
+  color: var(--text-primary, #0f172a);
+  background-color: var(--bg-surface, #ffffff);
+  border: 1px solid var(--border-strong, #cbd5e1);
+  border-radius: var(--radius-md, 8px);
+  outline: none;
+  transition: all var(--transition-fast, 150ms ease);
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group .custom-input:focus {
+  border-color: var(--color-accent, #2563eb);
+  background-color: var(--bg-surface, #ffffff);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Textarea Field */
+.form-group-desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--text-primary, #0f172a);
+  background-color: var(--bg-surface, #ffffff);
+  border: 1px solid var(--border-strong, #cbd5e1);
+  border-radius: var(--radius-md, 8px);
+  outline: none;
+  resize: vertical;
+  min-height: 100px;
+  transition: all var(--transition-fast, 150ms ease);
+}
+
+.form-textarea:focus {
+  border-color: var(--color-accent, #2563eb);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.form-textarea::placeholder,
+.form-group input::placeholder {
+  color: var(--text-light, #94a3b8);
+}
+
+/* Thumbnail File Input */
+.form-group-thumbnail {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group-thumbnail input[type="file"],
+.thumbnail-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.875rem;
+  color: var(--text-muted, #64748b);
+  background-color: var(--bg-surface-subtle, #f8fafc);
+  border: 1.5px dashed var(--border-strong, #cbd5e1);
+  border-radius: var(--radius-md, 8px);
+  cursor: pointer;
+  outline: none;
+  transition: all var(--transition-fast, 150ms ease);
+  font-family: inherit;
+}
+
+.form-group-thumbnail input[type="file"]:hover,
+.thumbnail-input:hover {
+  background-color: var(--bg-surface-muted, #f1f5f9);
+  border-color: var(--border-strong, #94a3b8);
+}
+
+.form-group-thumbnail input[type="file"]::file-selector-button,
+.thumbnail-input::file-selector-button {
+  margin-right: 1rem;
+  padding: 0.45rem 1rem;
+  border: none;
+  border-radius: var(--radius-sm, 6px);
+  background: var(--color-accent, #2563eb);
+  color: var(--text-inverse, #ffffff);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all var(--transition-fast, 150ms ease);
+}
+
+.form-group-thumbnail input[type="file"]::file-selector-button:hover,
+.thumbnail-input::file-selector-button:hover {
+  background: var(--color-accent-hover, #1d4ed8);
+}
+
+/* Submit Button */
+.form-btn-container {
+  margin-top: 0.75rem;
+}
+
+.product-submit-btn {
+  width: 100%;
+  padding: 0.85rem 1.5rem;
+  background-color: var(--color-accent, #2563eb);
+  color: var(--text-inverse, #ffffff);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  border: none;
+  border-radius: var(--radius-md, 8px);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(15, 23, 42, 0.08));
+  transition: all var(--transition-fast, 150ms ease);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-submit-btn:hover {
+  background-color: var(--color-accent-hover, #1d4ed8);
+  box-shadow: var(--shadow-md, 0 4px 6px rgba(15, 23, 42, 0.1));
+  transform: translateY(-1px);
+}
+
+.product-submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .product-create-container {
+    margin: 1.5rem 1rem 3rem;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .product-create-title {
+    font-size: 1.5rem;
+  }
+}

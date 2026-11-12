@@ -1,0 +1,100 @@
+/* ==========================================================================
+   LOGIN / AUTHENTICATION PAGE STYLING (.login-wrapper, .login-form)
+   ========================================================================== */
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(80vh - 100px);
+  background-color: var(--bg-page, #f8fafc);
+  padding: 3rem 1.5rem;
+  font-family: var(--font-family, inherit);
+}
+
+.login-form {
+  background: var(--bg-surface, #ffffff);
+  padding: 2.5rem 2.25rem;
+  border-radius: var(--radius-xl, 16px);
+  border: 1px solid var(--border-default, #e2e8f0);
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(15, 23, 42, 0.06));
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-heading {
+  margin: 1.25rem 0 1.75rem 0;
+  color: var(--text-primary, #0f172a);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.login-fields {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.login-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  border: 1px solid var(--border-strong, #cbd5e1);
+  border-radius: var(--radius-md, 8px);
+  box-sizing: border-box;
+  transition: all var(--transition-fast, 150ms ease);
+  background-color: var(--bg-surface, #ffffff);
+  color: var(--text-primary, #0f172a);
+  font-family: inherit;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: var(--color-accent, #2563eb);
+  background-color: var(--bg-surface, #ffffff);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.login-submit-btn {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.85rem;
+  background-color: var(--color-accent, #2563eb);
+  color: var(--text-inverse, #ffffff);
+  border: none;
+  border-radius: var(--radius-md, 8px);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(15, 23, 42, 0.08));
+  transition: all var(--transition-fast, 150ms ease);
+  text-transform: capitalize;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-submit-btn:hover {
+  background-color: var(--color-accent-hover, #1d4ed8);
+  box-shadow: var(--shadow-md, 0 4px 6px rgba(15, 23, 42, 0.1));
+  transform: translateY(-1px);
+}
+
+.login-submit-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+  .login-wrapper {
+    padding: 2rem 1rem;
+  }
+
+  .login-form {
+    padding: 2rem 1.5rem;
+  }
+}

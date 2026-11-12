@@ -1,0 +1,226 @@
+/* ==========================================================================
+   ADMIN DASHBOARD STYLING (.admin-container)
+   ========================================================================== */
+
+.admin-container {
+  max-width: 1040px;
+  margin: 2.5rem auto 4rem;
+  padding: 0 1.5rem;
+  font-family: var(--font-family, inherit);
+  color: var(--text-primary, #0f172a);
+}
+
+/* Header Section */
+.admin-header {
+  margin-bottom: 2rem;
+  background: var(--bg-surface, #ffffff);
+  border: 1px solid var(--border-default, #e2e8f0);
+  padding: 2rem 2.25rem;
+  border-radius: var(--radius-xl, 16px);
+  color: var(--text-primary, #0f172a);
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(15, 23, 42, 0.06));
+}
+
+.admin-header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.65rem;
+  background: var(--color-accent-subtle, #eff6ff);
+  border: 1px solid var(--color-accent-border, #bfdbfe);
+  border-radius: var(--radius-full, 9999px);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-accent, #2563eb);
+  margin-bottom: 0.75rem;
+}
+
+.admin-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.02em;
+  color: var(--text-primary, #0f172a);
+}
+
+.admin-subtitle {
+  margin: 0.4rem 0 0 0;
+  color: var(--text-muted, #64748b);
+  font-size: 0.95rem;
+}
+
+/* 2-Card Grid Structure */
+.admin-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* Individual Card */
+.admin-card {
+  background: var(--bg-surface, #ffffff);
+  border-radius: var(--radius-xl, 16px);
+  border: 1px solid var(--border-default, #e2e8f0);
+  padding: 2rem;
+  box-shadow: var(--shadow-xs, 0 1px 2px rgba(15, 23, 42, 0.04));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform var(--transition-fast, 150ms ease),
+              box-shadow var(--transition-fast, 150ms ease);
+}
+
+.admin-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md, 0 4px 6px -1px rgba(15, 23, 42, 0.06));
+}
+
+/* Card Header */
+.admin-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.admin-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-lg, 12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.admin-card-products .admin-card-icon {
+  background: var(--color-accent-subtle, #eff6ff);
+  color: var(--color-accent, #2563eb);
+  border: 1px solid var(--color-accent-border, #bfdbfe);
+}
+
+.admin-card-orders .admin-card-icon {
+  background: var(--color-success-bg, #ecfdf5);
+  color: var(--color-success, #059669);
+  border: 1px solid var(--color-success-border, #a7f3d0);
+}
+
+.admin-card-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.admin-card-title-group {
+  flex: 1;
+}
+
+.admin-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-primary, #0f172a);
+}
+
+.admin-card-desc {
+  margin: 0.35rem 0 0 0;
+  font-size: 0.9rem;
+  color: var(--text-muted, #64748b);
+  line-height: 1.45;
+}
+
+/* Actions in Card */
+.admin-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-default, #e2e8f0);
+}
+
+/* Specific button styles */
+.admin-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.6rem 1.15rem;
+  border-radius: var(--radius-md, 8px);
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-fast, 150ms ease);
+  text-transform: capitalize;
+  border: 1px solid transparent;
+}
+
+.admin-btn-create {
+  background-color: var(--color-accent, #2563eb);
+  color: var(--text-inverse, #ffffff);
+}
+
+.admin-btn-create:hover {
+  background-color: var(--color-accent-hover, #1d4ed8);
+  transform: translateY(-1px);
+}
+
+.admin-btn-update {
+  background-color: var(--bg-surface, #ffffff);
+  color: var(--text-primary, #0f172a);
+  border-color: var(--border-strong, #cbd5e1);
+}
+
+.admin-btn-update:hover {
+  background-color: var(--bg-surface-subtle, #f8fafc);
+  transform: translateY(-1px);
+}
+
+.admin-btn-delete {
+  background-color: var(--color-danger-bg, #fef2f2);
+  color: var(--color-danger, #dc2626);
+  border-color: var(--color-danger-border, #fecaca);
+}
+
+.admin-btn-delete:hover {
+  background-color: var(--color-danger, #dc2626);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.admin-btn-delivery {
+  background-color: var(--color-success, #059669);
+  color: var(--text-inverse, #ffffff);
+}
+
+.admin-btn-delivery:hover {
+  background-color: #047857;
+  transform: translateY(-1px);
+}
+
+/* Unauthorized state */
+.admin-unauthorized {
+  max-width: 480px;
+  margin: 4rem auto;
+  padding: 3rem 2rem;
+  background: var(--bg-surface, #ffffff);
+  border-radius: var(--radius-xl, 16px);
+  text-align: center;
+  border: 1px solid var(--border-default, #e2e8f0);
+}
+
+@media (max-width: 768px) {
+  .admin-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .admin-header {
+    padding: 1.5rem;
+  }
+
+  .admin-title {
+    font-size: 1.65rem;
+  }
+}

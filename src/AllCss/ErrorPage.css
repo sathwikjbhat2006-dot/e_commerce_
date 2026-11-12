@@ -1,0 +1,51 @@
+/* ==========================================================================
+   ERROR PAGE STYLING (.error-container)
+   ========================================================================== */
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  font-family: var(--font-family, inherit);
+}
+
+.error-image {
+  max-width: 280px;
+  height: auto;
+  margin-bottom: 2rem;
+  animation: float-illustration 5s ease-in-out infinite;
+}
+
+@keyframes float-illustration {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.error-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-primary, #0f172a);
+  margin: 0 0 0.85rem 0;
+  letter-spacing: -0.02em;
+}
+
+.error-message {
+  font-size: 1rem;
+  color: var(--text-secondary, #334155);
+  max-width: 500px;
+  line-height: 1.5;
+  margin: 0 0 2rem 0;
+  background: var(--bg-surface, #ffffff);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-md, 8px);
+  border: 1px solid var(--border-default, #e2e8f0);
+  box-shadow: var(--shadow-xs, 0 1px 2px rgba(15, 23, 42, 0.04));
+}
